@@ -4,6 +4,12 @@
 
 **Implemented enhancements:**
 
+- feature 11 [\#13](https://github.com/tigerfish-tech/changelog-flow/pull/13)
+
+## [v0.3.0](https://github.com/tigerfish-tech/changelog-flow/tree/v0.3.0) (2021-10-07)
+
+**Implemented enhancements:**
+
 - check if tag [\#12](https://github.com/tigerfish-tech/changelog-flow/pull/12)
 - no issues [\#11](https://github.com/tigerfish-tech/changelog-flow/pull/11)
 
