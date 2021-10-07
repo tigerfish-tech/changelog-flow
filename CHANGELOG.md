@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased](https://github.com/tigerfish-tech/changelog-flow/tree/HEAD)
+## [v0.4.0](https://github.com/tigerfish-tech/changelog-flow/tree/v0.4.0) (2021-10-07)
 
 **Implemented enhancements:**
 
@@ -27,6 +27,7 @@
 **Fixed bugs:**
 
 - fix 3 [\#9](https://github.com/tigerfish-tech/changelog-flow/pull/9)
+- feature 4 fix [\#6](https://github.com/tigerfish-tech/changelog-flow/pull/6)
 
 ## [v0.0.1](https://github.com/tigerfish-tech/changelog-flow/tree/v0.0.1) (2021-10-07)
 
@@ -39,7 +40,6 @@
 
 **Fixed bugs:**
 
-- feature 4 fix [\#6](https://github.com/tigerfish-tech/changelog-flow/pull/6)
 - bugfix 1 [\#3](https://github.com/tigerfish-tech/changelog-flow/pull/3)
 
 
