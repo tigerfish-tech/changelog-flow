@@ -32,7 +32,7 @@ jobs:
           name: changelog
           path: CHANGELOG.md
       - name: Commit CHANGELOG.md
-        if: github.event.pull_request.merged == true
+        if: github.event.pull_request.merged == true || startsWith(github.ref, 'refs/tags/v')
         run: |
           git config --global user.name 'tigerfish-tech'
           git config --global user.email 'tigerfish.tech@gmail.com'
