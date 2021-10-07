@@ -1,0 +1,38 @@
+name: 'release-changelog'
+on:
+  push:
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+  pull_request:
+    types: [ closed ]
+
+jobs:
+  changelog:
+    name: Changelog generation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Changelog
+        id: changelog
+        uses: heinrichreimer/github-changelog-generator-action@v2.2
+          token: ${{secrets.GITHUB_TOKEN}}
+          issues: true
+          issuesWoLabels: true
+          pullRequests: true
+          prWoLabels: true
+          unreleased: true
+          base: CHANGELOG.md
+          addSections: '{"documentation":{"prefix":"**Documentation:**","labels":["documentation"]}}'
+      - name: Upload CHANGELOG.md
+        uses: actions/upload-artifact@v2
+        with:
+          name: changelog
+          path: CHANGELOG.md
+      - name: Commit CHANGELOG.md
+        run: |
+          git config --global user.name 'Tigerfish'
+          git config --global user.email 'tigerfish.tech@gmail.com'
+          git remote set-url origin https://x-access-token:${{secrets.GITHUB_TOKEN}}@git.daimler.com/$GITHUB_REPOSITORY
+          git add .
+          git checkout "${GITHUB_REF}"
+          git commit -am "Automated report"
+          git push
