@@ -39,4 +39,4 @@ jobs:
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git add .
           git commit -am "Automated report"
-          git push
+          git push origin HEAD:develop
