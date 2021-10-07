@@ -27,7 +27,6 @@ jobs:
           pullRequests: true
           prWoLabels: true
           unreleased: true
-          base: CHANGELOG.md
           addSections: '{"documentation":{"prefix":"**Documentation:**","labels":["documentation"]}}'
       - name: Upload CHANGELOG.md
         uses: actions/upload-artifact@v2
