@@ -4,7 +4,9 @@ on:
     tags:
       - "v[0-9]+.[0-9]+.[0-9]+"
   pull_request:
-    types: [ closed ]
+    branches:
+      - develop
+    types: [closed]
 
 jobs:
   changelog:
@@ -33,6 +35,7 @@ jobs:
           name: changelog
           path: CHANGELOG.md
       - name: Commit CHANGELOG.md
+        if: github.event.pull_request.merged == true
         run: |
           git config --global user.name 'tigerfish-tech'
           git config --global user.email 'tigerfish.tech@gmail.com'
