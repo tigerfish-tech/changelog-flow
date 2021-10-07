@@ -30,6 +30,7 @@ jobs:
           path: CHANGELOG.md
       - name: Commit CHANGELOG.md
         run: |
+          git init
           git config --global user.name 'tigerfish-tech'
           git config --global user.email 'tigerfish.tech@gmail.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@git.daimler.com/$GITHUB_REPOSITORY
