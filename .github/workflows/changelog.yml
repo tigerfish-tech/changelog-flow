@@ -11,6 +11,10 @@ jobs:
     name: Changelog generation
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Create Changelog
         id: changelog
         uses: heinrichreimer/github-changelog-generator-action@v2.2
@@ -30,7 +34,6 @@ jobs:
           path: CHANGELOG.md
       - name: Commit CHANGELOG.md
         run: |
-          git init
           git config --global user.name 'tigerfish-tech'
           git config --global user.email 'tigerfish.tech@gmail.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@git.daimler.com/$GITHUB_REPOSITORY
