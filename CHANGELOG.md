@@ -4,6 +4,7 @@
 
 **Implemented enhancements:**
 
+- check if tag [\#12](https://github.com/tigerfish-tech/changelog-flow/pull/12)
 - no issues [\#11](https://github.com/tigerfish-tech/changelog-flow/pull/11)
 
 **Fixed bugs:**
@@ -16,7 +17,6 @@
 
 - feature 6 [\#8](https://github.com/tigerfish-tech/changelog-flow/pull/8)
 - feature 5 [\#7](https://github.com/tigerfish-tech/changelog-flow/pull/7)
-- feature 3 [\#4](https://github.com/tigerfish-tech/changelog-flow/pull/4)
 
 **Fixed bugs:**
 
@@ -27,6 +27,7 @@
 **Implemented enhancements:**
 
 - feature 4 [\#5](https://github.com/tigerfish-tech/changelog-flow/pull/5)
+- feature 3 [\#4](https://github.com/tigerfish-tech/changelog-flow/pull/4)
 - feature 2 [\#2](https://github.com/tigerfish-tech/changelog-flow/pull/2)
 - content for pr [\#1](https://github.com/tigerfish-tech/changelog-flow/pull/1)
 
