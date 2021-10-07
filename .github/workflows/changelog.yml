@@ -14,7 +14,8 @@ jobs:
       - name: Create Changelog
         id: changelog
         uses: heinrichreimer/github-changelog-generator-action@v2.2
-          token: ${{secrets.GITHUB_TOKEN}}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           issues: true
           issuesWoLabels: true
           pullRequests: true
@@ -31,7 +32,7 @@ jobs:
         run: |
           git config --global user.name 'Tigerfish'
           git config --global user.email 'tigerfish.tech@gmail.com'
-          git remote set-url origin https://x-access-token:${{secrets.GITHUB_TOKEN}}@git.daimler.com/$GITHUB_REPOSITORY
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@git.daimler.com/$GITHUB_REPOSITORY
           git add .
           git checkout "${GITHUB_REF}"
           git commit -am "Automated report"
